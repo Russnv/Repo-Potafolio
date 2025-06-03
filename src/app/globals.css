@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --background: #EDE9FE;      /* Fondo lavanda */
+  --foreground: #1F2937;      /* Texto gris oscuro */
+
+  --color-primary: #7C3AED;   /* Violeta */
+  --color-accent: #F472B6;    /* Rosado */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
