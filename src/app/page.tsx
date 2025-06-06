@@ -141,7 +141,7 @@ export default function Home() {
         </motion.p>
 
         <motion.a
-          href="/Natalia-Villalba-CV.pdf"
+          href="/CV_Natalia.pdf"
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
