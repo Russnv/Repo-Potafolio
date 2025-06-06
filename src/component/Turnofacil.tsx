@@ -1,20 +1,18 @@
-// components/ProyectoTurnos.tsx
-
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
- export const ProyectoTurnos = () => {
+export const Turnofacil = () => {
   return (
-    <section className="max-w-6xl px-4 py-16 mx-auto">
+    <section className="max-w-6xl px-4 py-16 mx-auto" id="proyecto-turnos">
       <motion.h2
         className="mb-6 text-3xl font-bold text-center text-yellow-700"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Turnos para Peluquería
+        Turno Fácil
       </motion.h2>
 
       <motion.p
@@ -23,14 +21,15 @@ import Link from "next/link";
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        Esta aplicación web permite a los usuarios reservar turnos para una peluquería de forma fácil e intuitiva. Cuenta con autenticación, envío de correos de confirmación y una interfaz visual atractiva. También incluye animaciones y un sistema para cancelar turnos.
+        Esta aplicación web permite a los usuarios reservar turnos de forma fácil e intuitiva. Cuenta con autenticación, envío de correos de confirmación. También cuenta con WhatsApp para confirmación de los turnos y una interfaz visual atractiva. Incluye animaciones y un sistema para cancelar turnos.
       </motion.p>
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 mb-12 sm:grid-cols-2">
         {[
-          { src: "/MisTurnos.png", alt: "Lista de turnos" },
-          { src: "/rserbarTurno.png", alt: "Reservar turno" },
-          { src: "/TurnosPeluqueria.png", alt: "Pantalla principal" },
+          { src: "/TurnoFacil.png", alt: "Inicio" },
+          { src: "/Responsivo.png", alt: "Responsivo" },
+          { src: "/Especialidades.png", alt: "Especialidades" },
+          { src: "/AsignacionDeTurno.png", alt: "Asignación de turno" },
         ].map((img, i) => (
           <motion.div
             key={i}
@@ -50,8 +49,9 @@ import Link from "next/link";
           </motion.div>
         ))}
       </div>
-       {/* Botón de redirección */}
-      <div className="flex justify-center p-4">
+
+      {/* Botón de redirección */}
+      <div className="flex justify-center">
         <Link href="/">
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -66,4 +66,4 @@ import Link from "next/link";
   );
 };
 
-export default ProyectoTurnos;
+export default Turnofacil;
