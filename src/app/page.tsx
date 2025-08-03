@@ -88,11 +88,17 @@ export default function Home() {
           className="border-4 border-white rounded-full shadow-lg"
         />
         <h2 className="mt-4 text-3xl font-bold">Frontend Developer Jr</h2>
-        <p className="max-w-md mt-2">
-          Apasionada por crear interfaces modernas con React, Next.js y
-          Tailwind. Actualmente desarrollando <strong>“Turno Facil”</strong> y
-          creciendo cada día.
-        </p>
+        <motion.p
+          className="max-w-md mt-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          Desarrolladora frontend con gran capacidad para aprender rápido y
+          adaptarme a nuevos entornos. Puedo migrar sin complicaciones entre
+          frameworks o autenticaciones de terceros. Me apasiona crear landing
+          pages atractivas y llevar cada proyecto hasta su despliegue final.
+        </motion.p>
         <a
           href="#proyectos"
           className="px-5 py-2 mt-6 text-white transition rounded-full bg-violet-700 hover:bg-violet-800"
@@ -141,7 +147,7 @@ export default function Home() {
         </motion.p>
 
         <motion.a
-          href="/CV_Natalia.pdf"
+          href="/CV_Natalia-2-2.pdf"
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -170,10 +176,10 @@ export default function Home() {
               link: "/proyecto-turnos",
             },
             {
-              nombre: "Mi Tienda",
-              desc: "E-commerce con Next.js y Tailwind. Vista de productos y carrito.",
+              nombre: "Prototipo Carpintería",
+              desc: "Es un prototipo para una empresa ficticia dedicada al diseño de muebles de cocina e interiores personalizados.",
               interno: false,
-              link: "https://mitienda-ruby.vercel.app/",
+              link: "https://prototipo-carpinteria.vercel.app/",
             },
           ].map((proyecto, i) => (
             <motion.div
